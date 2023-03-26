@@ -94,6 +94,10 @@ footer {
 }
 
 @media screen and (max-width: 750px){
+    #div-pecados {
+        padding-bottom: 120px;
+    }
+    
     #lista-pecados {
         columns: 2;
     }
@@ -118,6 +122,10 @@ footer {
 }
 
 @media screen and (max-width: 500px){
+    #div-pecados {
+        padding-bottom: 120px;
+    }
+
     #lista-pecados {
         columns: 1;
         display: inline-block;

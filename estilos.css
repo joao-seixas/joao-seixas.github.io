@@ -97,11 +97,47 @@ footer {
     #lista-pecados {
         columns: 2;
     }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    #div-situacao {
+        order: 0;
+        padding-bottom: 10px;
+    }
+
+    #div-pontos {
+        order: 1;
+        padding-bottom: 10px;
+    }
+
+    #div-botoes {
+        order: 2;
+    }
 }
 
 @media screen and (max-width: 500px){
     #lista-pecados {
         columns: 1;
         display: inline-block;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    #div-situacao {
+        order: 0;
+        padding-bottom: 10px;
+    }
+
+    #div-pontos {
+        order: 1;
+        padding-bottom: 10px;
+    }
+
+    #div-botoes {
+        order: 2;
     }
 }

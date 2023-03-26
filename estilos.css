@@ -42,7 +42,7 @@ footer {
     width: 100%;
     padding: 10px;
     color: white;
-    background-color: rgb(114, 114, 114);
+    background-color: black;
     position: fixed;
     bottom: 0;
 }
@@ -52,20 +52,29 @@ footer {
     font-size: larger;
 }
 
-#div-limpar {
+#div-botoes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.botoes {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
+    gap: 5px;
 }
 
-#div-limpar:hover {
+#img-twitter {
+    width: 25px;
+}
+
+.botoes:hover {
     cursor: pointer;
 }
 
 #img-limpar {
     width: 20px;
-    display: block;
 }
 
 #tag-limpar {

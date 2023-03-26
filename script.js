@@ -25,7 +25,7 @@ function montaLista() {
         elementoAtual.addEventListener('click', clicouLista, false);
         listaPecados.appendChild(elementoAtual);
     }
-    atualizaPontos();
+    atualizaPlacar();
 }
 
 function clicouLista(evento) {
@@ -40,81 +40,76 @@ function clicouLista(evento) {
         pecados[1][indice] = true;
     }
 
-    atualizaPontos();
+    atualizaPlacar();
     biscoitos.setCookie('pecados', pecados[1].map(valor => valor ? 1 : 0).join(), 12);
 }
 
-function atualizaPontos() {
-    let pontosAtuais = pecados[1].filter(Boolean).length;
-
+function atualizaPlacar() {
+    let pontosAtuais = atualizaPontos();
     pontos.innerText = pontosAtuais;
+    situacao.innerText = pegaMensagem(pontosAtuais);
+}
 
+function atualizaPontos() {
+    return pecados[1].filter(Boolean).length;
+}
+
+function pegaMensagem(pontosAtuais) {
     switch (true) {
-        case pontosAtuais < 1 : situacao.innerText = 'Jesus Cristo';
-        break;
+        case pontosAtuais < 1 : return 'Jesus Cristo';
 
-        case pontosAtuais < 2 : situacao.innerText = 'Santo';
-        break;
+        case pontosAtuais < 2 : return 'Santo';
 
-        case pontosAtuais < 4 : situacao.innerText = 'Apóstolo';
-        break;
+        case pontosAtuais < 4 : return 'Apóstolo';
 
-        case pontosAtuais < 6 : situacao.innerText = 'Discípulo';
-        break;
+        case pontosAtuais < 6 : return 'Discípulo';
 
-        case pontosAtuais < 8 : situacao.innerText = 'Cristão';
-        break;
+        case pontosAtuais < 8 : return 'Cristão';
 
-        case pontosAtuais < 13 : situacao.innerText = 'Cidadão de Bem';
-        break;
+        case pontosAtuais < 13 : return 'Cidadão de Bem';
 
-        case pontosAtuais < 16 : situacao.innerText = 'Descrente';
-        break;
+        case pontosAtuais < 16 : return 'Descrente';
 
-        case pontosAtuais < 19 : situacao.innerText = 'Impuro';
-        break;
+        case pontosAtuais < 19 : return 'Impuro';
 
-        case pontosAtuais < 24 : situacao.innerText = 'Pecador';
-        break;
+        case pontosAtuais < 24 : return 'Pecador';
 
-        case pontosAtuais < 29 : situacao.innerText = 'Blasfemo';
-        break;
+        case pontosAtuais < 29 : return 'Blasfemo';
 
-        case pontosAtuais < 34 : situacao.innerText = 'Semente do Mal';
-        break;
+        case pontosAtuais < 34 : return 'Semente do Mal';
 
-        case pontosAtuais < 39 : situacao.innerText = 'Apóstata';
-        break;
+        case pontosAtuais < 39 : return 'Apóstata';
 
-        case pontosAtuais < 44 : situacao.innerText = 'Pagão';
-        break;
+        case pontosAtuais < 44 : return 'Pagão';
 
-        case pontosAtuais < 49 : situacao.innerText = 'Infiel';
-        break;
+        case pontosAtuais < 49 : return 'Infiel';
 
-        case pontosAtuais < 54 : situacao.innerText = 'Herege';
-        break;
+        case pontosAtuais < 54 : return 'Herege';
 
-        case pontosAtuais < 64 : situacao.innerText = 'Abominação';
-        break;
+        case pontosAtuais < 64 : return 'Abominação';
 
-        case pontosAtuais < 74 : situacao.innerText = 'Servo do Mal';
-        break;
+        case pontosAtuais < 74 : return 'Servo do Mal';
 
-        case pontosAtuais < 84 : situacao.innerText = 'Anticristo';
-        break;
+        case pontosAtuais < 84 : return 'Anticristo';
 
-        case pontosAtuais < 94 : situacao.innerText = 'Adorador do Demo';
-        break;
+        case pontosAtuais < 94 : return 'Adorador do Demo';
 
-        case pontosAtuais < 104 : situacao.innerText = 'Filho das Trevas';
-        break;
+        case pontosAtuais < 104 : return 'Filho das Trevas';
     }
 }
 
 function limpar() {
     biscoitos.setCookie('pecados', '', 12);
     document.location.reload();
+}
+
+function compartilhar() {
+    let pontosAtuais = atualizaPontos();
+    let categoria = pegaMensagem(pontosAtuais).toUpperCase();
+    let mensagem = encodeURI(`Fiz o teste dos pecados e marquei ${pontosAtuais} pontos.\nEu sou um ${categoria}!\n\nFaça seu teste também em:\n`);
+    const site = encodeURI('https://joao-seixas.github.io/');
+
+    window.open(`https://twitter.com/share?text=${mensagem}&url=${site}`);
 }
 
 function cookies() {

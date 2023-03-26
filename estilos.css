@@ -11,7 +11,7 @@ header {
 
 #div-pecados {
     margin: 15px;
-    padding-bottom: 45px;
+    padding-bottom: 50px;
 }
 
 #lista-pecados {
@@ -99,7 +99,7 @@ footer {
     }
 
     #div-pecados {
-        padding-bottom: 120px;
+        padding-bottom: 80px;
     }
 
     .tag {
@@ -121,6 +121,9 @@ footer {
     }
 
     #div-botoes {
+        position: absolute;
+        gap: 15px;
+        right: 50px;
         order: 2;
     }
 }
@@ -132,7 +135,7 @@ footer {
     }
 
     #div-pecados {
-        padding-bottom: 120px;
+        padding-bottom: 80px;
     }
     
     .tag {
@@ -154,6 +157,9 @@ footer {
     }
 
     #div-botoes {
+        position: absolute;
+        gap: 15px;
+        right: 50px;
         order: 2;
     }
 }

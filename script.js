@@ -68,33 +68,35 @@ function pegaMensagem(pontosAtuais) {
 
         case pontosAtuais < 13 : return 'Cidadão de Bem';
 
-        case pontosAtuais < 16 : return 'Descrente';
+        case pontosAtuais < 18 : return 'Descrente';
 
-        case pontosAtuais < 19 : return 'Impuro';
+        case pontosAtuais < 23 : return 'Impuro';
 
-        case pontosAtuais < 24 : return 'Pecador';
+        case pontosAtuais < 28 : return 'Pecador';
 
-        case pontosAtuais < 29 : return 'Blasfemo';
+        case pontosAtuais < 32 : return 'Blasfemo';
 
-        case pontosAtuais < 34 : return 'Semente do Mal';
+        case pontosAtuais < 37 : return 'Semente do Mal';
 
-        case pontosAtuais < 39 : return 'Apóstata';
+        case pontosAtuais < 42 : return 'Apóstata';
 
-        case pontosAtuais < 44 : return 'Pagão';
+        case pontosAtuais < 47 : return 'Pagão';
 
-        case pontosAtuais < 49 : return 'Infiel';
+        case pontosAtuais < 52 : return 'Infiel';
 
-        case pontosAtuais < 54 : return 'Herege';
+        case pontosAtuais < 57 : return 'Herege';
 
-        case pontosAtuais < 64 : return 'Abominação';
+        case pontosAtuais < 62 : return 'Abominação';
 
-        case pontosAtuais < 74 : return 'Servo do Mal';
+        case pontosAtuais < 67 : return 'Servo do Mal';
 
-        case pontosAtuais < 84 : return 'Anticristo';
+        case pontosAtuais < 77 : return 'Anticristo';
 
-        case pontosAtuais < 94 : return 'Adorador do Demo';
+        case pontosAtuais < 87 : return 'Adorador do Demo';
 
-        case pontosAtuais < 104 : return 'Filho das Trevas';
+        case pontosAtuais < 97 : return 'Filho das Trevas';
+
+        default : return 'Bolsomínion';
     }
 }
 

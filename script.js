@@ -58,43 +58,43 @@ function pegaMensagem(pontosAtuais) {
     switch (true) {
         case pontosAtuais < 1 : return 'Jesus Cristo';
 
-        case pontosAtuais < 3 : return 'Santo';
+        case pontosAtuais < 4 : return 'Santo';
 
-        case pontosAtuais < 5 : return 'Apóstolo';
+        case pontosAtuais < 7 : return 'Apóstolo';
 
-        case pontosAtuais < 7 : return 'Discípulo';
+        case pontosAtuais < 10 : return 'Discípulo';
 
-        case pontosAtuais < 10 : return 'Cristão';
+        case pontosAtuais < 15 : return 'Cristão';
 
-        case pontosAtuais < 13 : return 'Ateu';
+        case pontosAtuais < 20 : return 'Ateu';
 
-        case pontosAtuais < 18 : return 'Descrente';
+        case pontosAtuais < 25 : return 'Descrente';
 
-        case pontosAtuais < 23 : return 'Impuro';
+        case pontosAtuais < 30 : return 'Impuro';
 
-        case pontosAtuais < 28 : return 'Pecador';
+        case pontosAtuais < 35 : return 'Pecador';
 
-        case pontosAtuais < 32 : return 'Blasfemo';
+        case pontosAtuais < 40 : return 'Blasfemo';
 
-        case pontosAtuais < 37 : return 'Semente do Mal';
+        case pontosAtuais < 45 : return 'Apóstata';
 
-        case pontosAtuais < 42 : return 'Apóstata';
+        case pontosAtuais < 50 : return 'Pagão';
 
-        case pontosAtuais < 47 : return 'Pagão';
+        case pontosAtuais < 55 : return 'Infiel';
 
-        case pontosAtuais < 52 : return 'Infiel';
+        case pontosAtuais < 60 : return 'Herege';
 
-        case pontosAtuais < 57 : return 'Herege';
+        case pontosAtuais < 65 : return 'Semente do Mal';
 
-        case pontosAtuais < 62 : return 'Abominação';
+        case pontosAtuais < 70 : return 'Abominação';
 
-        case pontosAtuais < 67 : return 'Servo do Mal';
+        case pontosAtuais < 75 : return 'Servo do Mal';
 
-        case pontosAtuais < 77 : return 'Anticristo';
+        case pontosAtuais < 82 : return 'Adorador do Demo';
 
-        case pontosAtuais < 87 : return 'Adorador do Demo';
+        case pontosAtuais < 89 : return 'Anticristo';
 
-        case pontosAtuais < 97 : return 'Filho das Trevas';
+        case pontosAtuais < 96 : return 'Filho das Trevas';
 
         case pontosAtuais < 108 : return 'Cidadão de Bem';
 
@@ -108,8 +108,6 @@ function limpar() {
 }
 
 function compartilhar() {
-    imagem();
-
     let pontosAtuais = atualizaPontos();
     let categoria = pegaMensagem(pontosAtuais).toUpperCase();
     let mensagem = encodeURI(`Fiz o teste dos pecados e marquei ${pontosAtuais} pontos.\nEu sou um ${categoria}!\n\nFaça seu teste também em:\n`);
@@ -118,8 +116,8 @@ function compartilhar() {
     window.open(`https://twitter.com/share?text=${mensagem}&url=${site}`);
 }
 
-function imagem() {
-    htmlToImage.toJpeg(document.getElementById('principal'), { quality: 0.95 })
+function baixar() {
+    htmlToImage.toJpeg(document.getElementById('principal'), { quality: 0.95, backgroundColor: 'white' })
     .then(function (dataUrl) {
       var link = document.createElement('a');
       link.download = 'pecados.jpeg';

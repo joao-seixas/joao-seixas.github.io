@@ -9,12 +9,8 @@ header {
     padding-top: 10px;
 }
 
-main {
-    background-color: white;
-}
-
 #div-pecados {
-    padding: 15px 15px 80px 15px;
+    padding: 15px 15px 5rem 15px;
 }
 
 #lista-pecados {
@@ -102,7 +98,7 @@ footer {
     }
 
     #div-pecados {
-        padding-bottom: 80px;
+        padding-bottom: 6rem;
     }
 
     .tag {
@@ -138,7 +134,7 @@ footer {
     }
 
     #div-pecados {
-        padding-bottom: 80px;
+        padding-bottom: 6rem;
     }
     
     .tag {

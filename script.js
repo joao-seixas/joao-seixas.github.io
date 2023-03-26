@@ -58,15 +58,15 @@ function pegaMensagem(pontosAtuais) {
     switch (true) {
         case pontosAtuais < 1 : return 'Jesus Cristo';
 
-        case pontosAtuais < 2 : return 'Santo';
+        case pontosAtuais < 3 : return 'Santo';
 
-        case pontosAtuais < 4 : return 'Apóstolo';
+        case pontosAtuais < 5 : return 'Apóstolo';
 
-        case pontosAtuais < 6 : return 'Discípulo';
+        case pontosAtuais < 7 : return 'Discípulo';
 
-        case pontosAtuais < 8 : return 'Cristão';
+        case pontosAtuais < 10 : return 'Cristão';
 
-        case pontosAtuais < 13 : return 'Cidadão de Bem';
+        case pontosAtuais < 13 : return 'Ateu';
 
         case pontosAtuais < 18 : return 'Descrente';
 
@@ -96,6 +96,8 @@ function pegaMensagem(pontosAtuais) {
 
         case pontosAtuais < 97 : return 'Filho das Trevas';
 
+        case pontosAtuais < 108 : return 'Cidadão de Bem';
+
         default : return 'Bolsomínion';
     }
 }
@@ -106,12 +108,24 @@ function limpar() {
 }
 
 function compartilhar() {
+    imagem();
+
     let pontosAtuais = atualizaPontos();
     let categoria = pegaMensagem(pontosAtuais).toUpperCase();
     let mensagem = encodeURI(`Fiz o teste dos pecados e marquei ${pontosAtuais} pontos.\nEu sou um ${categoria}!\n\nFaça seu teste também em:\n`);
     const site = encodeURI('https://joao-seixas.github.io/');
 
     window.open(`https://twitter.com/share?text=${mensagem}&url=${site}`);
+}
+
+function imagem() {
+    htmlToImage.toJpeg(document.getElementById('principal'), { quality: 0.95 })
+    .then(function (dataUrl) {
+      var link = document.createElement('a');
+      link.download = 'pecados.jpeg';
+      link.href = dataUrl;
+      link.click();
+    });
 }
 
 function cookies() {

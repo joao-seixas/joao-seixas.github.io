@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+header {
+    padding-top: 10px;
+}
+
+#div-pecados {
+    margin: 15px;
+    padding-bottom: 45px;
+}
+
+#lista-pecados {
+    columns: 5;
+    list-style-type: none;
+    margin: auto;
+}
+
+.item-lista {
+    text-align: left;
+    padding: 3px;
+    user-select: none;
+}
+
+.item-lista:hover {
+    cursor: pointer;
+}
+
+.imagem-lista {
+    width: 12px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: rgb(114, 114, 114);
+    position: fixed;
+    bottom: 0;
+}
+
+#situacao {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#div-limpar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+#div-limpar:hover {
+    cursor: pointer;
+}
+
+#img-limpar {
+    width: 20px;
+    display: block;
+}
+
+#tag-limpar {
+    font-size: smaller;
+}
+
+@media screen and (max-width: 1250px){
+    #lista-pecados {
+        columns: 4;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #lista-pecados {
+        columns: 3;
+    }
+}
+
+@media screen and (max-width: 750px){
+    #lista-pecados {
+        columns: 2;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #lista-pecados {
+        columns: 1;
+        display: inline-block;
+    }
+}

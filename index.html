@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet">
+    <title>Lista de Pecados</title>
+</head>
+<body onload="montaLista();">
+    <header>
+        <h1>Lista de Pecados</h1>
+        <h3>"O principal elemento para uma vida livre do pecado é o arrependimento"</h3>
+    </header>
+    <main>
+        <div id="div-pecados">
+            <ul id="lista-pecados"></ul>
+        </div>
+    </main>
+    <footer>
+        <div id="div-pontos">
+            Pontos: <span id="pontos">0</span>
+        </div>
+        <div id="div-situacao">
+            <span id="situacao">Jesus Cristo</span>
+        </div>
+        <div id="div-limpar" onclick="limpar();">
+            <img id="img-limpar" src="img/refresh.svg" alt="limpar seleções" title="Refazer">
+            <span id="tag-limpar">LIMPAR</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

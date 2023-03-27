@@ -66,13 +66,13 @@ function pegaMensagem(pontosAtuais) {
 
         case pontosAtuais < 15 : return 'Cristão';
 
-        case pontosAtuais < 20 : return 'Ateu';
+        case pontosAtuais < 20 : return 'Pecador';
 
-        case pontosAtuais < 25 : return 'Descrente';
+        case pontosAtuais < 25 : return 'Impuro';
 
-        case pontosAtuais < 30 : return 'Impuro';
+        case pontosAtuais < 30 : return 'Descrente';
 
-        case pontosAtuais < 35 : return 'Pecador';
+        case pontosAtuais < 35 : return 'Ateu';
 
         case pontosAtuais < 40 : return 'Blasfemo';
 

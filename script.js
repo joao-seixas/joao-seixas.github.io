@@ -111,9 +111,9 @@ function compartilhar() {
     let pontosAtuais = atualizaPontos();
     let categoria = pegaMensagem(pontosAtuais).toUpperCase();
     let mensagem = encodeURI(`Fiz o teste dos pecados e marquei ${pontosAtuais} pontos.\nEu sou um ${categoria}!\n\nFaça seu teste também em:\n`);
-    const site = encodeURI('https://joao-seixas.github.io/');
+    const site = encodeURI(window.location.href);
 
-    window.open(`https://twitter.com/share?text=${mensagem}&url=${site}`);
+    window.open(`https://twitter.com/intent/tweet?text=${mensagem}&url=${site}`);
 }
 
 function baixar() {

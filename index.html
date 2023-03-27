@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="estilos.css" rel="stylesheet">
     <title>Lista de Pecados</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body onload="montaLista();">
     <header>
@@ -18,7 +18,7 @@
             <ul id="lista-pecados"></ul>
         </div>
     </main>
-    <footer>
+    <footer data-html2canvas-ignore="true">
         <div id="div-pontos">
             Pontos: <span id="pontos"></span>
         </div>

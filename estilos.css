@@ -6,7 +6,7 @@
 }
 
 header {
-    padding-top: 10px;
+    padding: 30px 0;
 }
 
 #div-pecados {
@@ -14,9 +14,10 @@ header {
 }
 
 #lista-pecados {
-    columns: 5;
+    columns: 7;
     list-style-type: none;
     margin: auto;
+    display: inline-block;
 }
 
 .item-lista {
@@ -80,6 +81,18 @@ footer {
     font-size: smaller;
 }
 
+@media screen and (max-width: 1750px){
+    #lista-pecados {
+        columns: 6;
+    }
+}
+
+@media screen and (max-width: 1500px){
+    #lista-pecados {
+        columns: 5;
+    }
+}
+
 @media screen and (max-width: 1250px){
     #lista-pecados {
         columns: 4;
@@ -130,7 +143,6 @@ footer {
 @media screen and (max-width: 500px){
     #lista-pecados {
         columns: 1;
-        display: inline-block;
     }
 
     #div-pecados {

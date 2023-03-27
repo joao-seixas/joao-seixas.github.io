@@ -117,12 +117,13 @@ function compartilhar() {
 }
 
 function baixar() {
-    htmlToImage.toJpeg(document.getElementById('principal'), { quality: 0.95, backgroundColor: 'white' })
-    .then(function (dataUrl) {
-      var link = document.createElement('a');
-      link.download = 'pecados.jpeg';
-      link.href = dataUrl;
-      link.click();
+    html2canvas(document.body, { windowWidth: 1250, windowHeight: 800 })
+    .then(function (meuCanvas) {
+        let dataUrl = meuCanvas.toDataURL('image/jpeg');
+        let link = document.createElement('a');
+        link.download = 'pecados.jpeg';
+        link.href = dataUrl;
+        link.click();
     });
 }
 
